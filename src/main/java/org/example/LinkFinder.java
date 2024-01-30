@@ -9,9 +9,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.RecursiveTask;
 
-public class LinkFinder extends RecursiveTask<Set<String>> {
-    public static Set<String> uniqueUrls = new HashSet<>();
-    public static TreeMap<String,List<String>> map = new TreeMap<>();
+public class LinkFinder extends RecursiveTask<Map<String, List<String>>> {
+    public static Map<String,List<String>> map = new TreeMap<>();
     private String url;
     private List<LinkFinder> tasks;
     private int tabLevel;
@@ -22,12 +21,9 @@ public class LinkFinder extends RecursiveTask<Set<String>> {
         this.tabLevel = tabLevel;
     }
 
-    public static TreeMap<String, List<String>> getMap() {
-        return map;
-    }
 
     @Override
-    protected Set<String> compute() {
+    protected Map<String,List<String>> compute() {
         try {
             Thread.sleep(200);
             Document html = Jsoup.connect(url)
@@ -39,7 +35,6 @@ public class LinkFinder extends RecursiveTask<Set<String>> {
             for (Element el : html.select("a")){
                 String currentUrl = el.attr("href").split("\\?")[0];
                 if(checkRequirements(currentUrl)){
-                    uniqueUrls.add(currentUrl);
                     LinkFinder task = new LinkFinder(currentUrl, tabLevel + 1);
                     task.fork();
                     tasks.add(task);
@@ -57,12 +52,12 @@ public class LinkFinder extends RecursiveTask<Set<String>> {
         }
 
 
-        return uniqueUrls;
+        return map;
     }
 
     private boolean checkRequirements(String url){
         return isItLinkChildOfRequiredUrl(url)
-                && !uniqueUrls.contains(url);
+                && !map.containsKey(url);
     }
 
     private boolean isItLinkChildOfRequiredUrl(String url){

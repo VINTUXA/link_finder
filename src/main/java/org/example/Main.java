@@ -12,17 +12,14 @@ public class Main {
 
         int cores = Runtime.getRuntime().availableProcessors();
         ForkJoinPool service = new ForkJoinPool(cores);
-        Set<String> urls = service.invoke(new LinkFinder(URL, 0));
-
-        Set<String> sortedUrls = new TreeSet<>(urls);
-
-        TreeMap<String,List<String>> map = LinkFinder.getMap();
+        service.invoke(new LinkFinder(URL, 0));
+        Map<String,List<String>> map = service.invoke(new LinkFinder(URL, 0));
         printMapToFile(pathToOutFile, map);
 
     }
 
 
-    public static void printMapToFile(String path,  TreeMap<String, List<String>> map) {
+    public static void printMapToFile(String path,  Map<String, List<String>> map) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(path))) {
             for (Map.Entry<String, List<String>> entry : map.entrySet()) {
                 String key = entry.getKey();
@@ -36,7 +33,7 @@ public class Main {
         }
     }
 
-    private static void printNestedUrlsToFile(PrintWriter writer, List<String> urls, int tabLevel, TreeMap<String,List<String>> map) {
+    private static void printNestedUrlsToFile(PrintWriter writer, List<String> urls, int tabLevel, Map<String,List<String>> map) {
         for (String url : urls) {
             StringBuilder spaces = new StringBuilder();
             for (int i = 0; i < tabLevel; i++) {
