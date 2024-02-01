@@ -1,18 +1,27 @@
-https://www.youtube.com
-https://www.youtube.com/about/
-    https://www.youtube.com/about/brand-resources/
-https://www.youtube.com/about/brand-resources/
-https://www.youtube.com/about/copyright/
-https://www.youtube.com/about/policies/
-https://www.youtube.com/about/press/
-https://www.youtube.com/ads/
-    https://www.youtube.com/ads/youtube-select/
-    https://www.youtube.com/ads/youtube-select/
-https://www.youtube.com/ads/youtube-select/
-https://www.youtube.com/creators/
-    https://www.youtube.com/creators/how-things-work/video-monetization/#youtube-partner-program
-https://www.youtube.com/creators/how-things-work/video-monetization/#youtube-partner-program
-https://www.youtube.com/howyoutubeworks
-    https://www.youtube.com/howyoutubeworks/
-    https://www.youtube.com/howyoutubeworks/
-https://www.youtube.com/howyoutubeworks/
+https://nopaper.ru
+    https://nopaper.ru/kedo
+        https://nopaper.ru/kedo/rabota-s-nerezidentami
+    https://nopaper.ru/edo
+        https://nopaper.ru/edo/banki
+        https://nopaper.ru/edo/samozanyatye
+    https://nopaper.ru/tarify/edo
+    https://nopaper.ru/tarify/kedo
+    https://nopaper.ru/akcii/kedo/vzaimozachet
+    https://nopaper.ru/akcii/kedo/skidka_za_rabochee_mesto
+    https://nopaper.ru/keysy/worldclass
+    https://nopaper.ru/keysy/manpower
+    https://nopaper.ru/keysy/uvelka
+    https://nopaper.ru/keysy/knopka
+    https://nopaper.ru/partners/program
+    https://nopaper.ru/o-nopaper/novosti
+    https://nopaper.ru/faq
+    https://nopaper.ru/partners/korusconsulting/digitalworkplace
+    https://nopaper.ru/personal-data-processing-policy
+    https://nopaper.ru/consent-to-the-processing-of-personal-data
+    https://nopaper.ru/edo-smz
+    https://nopaper.ru/samozanyatye
+    https://nopaper.ru/kak-bank-ubrir-pierieshiol-na-biezbumazhnoie-obsluzhivaniie-s-nopaper
+    https://nopaper.ru/case-port-transit-ekspeditor
+    https://nopaper.ru/terms-of-use
+    https://nopaper.ru/docs/law
+    https://nopaper.ru/podderzhka-brauzerov-i-os
